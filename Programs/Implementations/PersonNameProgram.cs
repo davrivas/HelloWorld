@@ -17,8 +17,7 @@ public class PersonNameProgram : IProgram, IAsyncProgram
 
     public void Run()
     {
-        var task = RunAsync();
-        task.Wait();
+        RunAsync().Wait();
     }
 
     public async Task RunAsync()
