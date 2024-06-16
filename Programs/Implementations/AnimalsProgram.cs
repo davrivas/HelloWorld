@@ -25,8 +25,8 @@ public class AnimalsProgram : IProgram
             };
 
             newAnimal.Name = ConsoleHelpers.GetString("Enter animal's name");
-            newAnimal.Height = ConsoleHelpers.GetDouble("Enter animal's height");
-            newAnimal.Weight = ConsoleHelpers.GetDouble("Enter animal's weight");
+            newAnimal.Height = ConsoleHelpers.GetDouble("Enter animal's height in cm");
+            newAnimal.Weight = ConsoleHelpers.GetDouble("Enter animal's weight in kg");
             animals.Add(newAnimal);
 
             @continue = ConsoleHelpers.GetInt("Press 1 to add a new animal");
@@ -40,7 +40,7 @@ public class AnimalsProgram : IProgram
         {
             Console.WriteLine($"Specie: {animal.GetType().Name}");
             Console.WriteLine($"Name: {animal.Name}");
-            Console.WriteLine($"Height: {animal.Height}m");
+            Console.WriteLine($"Height: {animal.Height}cm");
             Console.WriteLine($"Weight: {animal.Weight}kg");
             Console.WriteLine(AppConstants.SeparationLines);
         }
