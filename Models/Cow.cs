@@ -1,9 +1,8 @@
 ﻿using HelloWorld.Interfaces;
 
-namespace HelloWorld.Models
+namespace HelloWorld.Models;
+
+public class Cow : Animal
 {
-    public class Cow : Animal
-    {
-        protected override string Sound => "moo!";
-    }
+    protected override string Sound => "moo!";
 }
