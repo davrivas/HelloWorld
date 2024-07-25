@@ -16,11 +16,13 @@ public class AnimalsProgram : IProgram
             Console.WriteLine("Select animal:");
             Console.WriteLine("1.\tDog");
             Console.WriteLine("2.\tCat");
+            Console.WriteLine("3.\tCow");
             var option = ConsoleHelpers.GetInt();
 
             Animal newAnimal = option switch {
                 1 => new Dog(),
                 2 => new Cat(),
+                3 => new Cow(),
                 _ => throw new NotImplementedException($"Invalid animal: {option}")
             };
 
@@ -42,6 +44,7 @@ public class AnimalsProgram : IProgram
             Console.WriteLine($"Name: {animal.Name}");
             Console.WriteLine($"Height: {animal.Height}cm");
             Console.WriteLine($"Weight: {animal.Weight}kg");
+            animal.MakeSound();
             Console.WriteLine(AppConstants.SeparationLines);
         }
     }

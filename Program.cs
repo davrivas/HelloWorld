@@ -4,7 +4,7 @@ using HelloWorld.Programs.Implementations;
 
 namespace HelloWorld;
 
-class Program
+static class Program
 {
     static void Main(string[] args)
     {
@@ -30,8 +30,7 @@ class Program
         }
         finally
         {
-            Console.ReadKey(true);
-            Console.Clear();
+            Console.ReadKey();
         }
     }
 }
