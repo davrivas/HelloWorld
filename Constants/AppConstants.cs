@@ -3,7 +3,9 @@ public static class AppConstants
 {
     public static readonly string SeparationLines = new('-', 10);
 
-    public static readonly Dictionary<string, string> CountryNationalities = new()
+    public static Dictionary<string, string> CountryNationalities => _countryNationalities;
+
+    private static readonly Dictionary<string, string> _countryNationalities = new()
     {
         { "AF", "Afghan" },
         { "AL", "Albanian" },
